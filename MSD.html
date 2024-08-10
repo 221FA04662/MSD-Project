@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRIP - Bootstrap Template</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            height: 400px;
+        }
+        header {
+            background-color: #d4a017;
+            padding: 10px 0;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .logo {
+            background-color: #d4a017;
+            padding: 5px 15px;
+            display: inline-block;
+        }
+        nav {
+            float: right;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            background-color: #7c6f3f;
+        }
+        nav a:hover {
+            background-color: #6d5f3f;
+        }
+        main {
+            padding-top: 70px; /* Adjusted to account for the fixed header height */
+        }
+        .section {
+            position: relative;
+            overflow: hidden;
+            padding: 40px 0;
+            background-size: cover;
+            background-position: center;
+            color: black;
+        }
+        .curve {
+            position: absolute;
+            width: 50%;
+            height: 85%;
+            background-color: rgba(255, 255, 255, 1); /* Solid white */
+            border-radius: 0 100% 100% 0;
+            top: 10;
+            bottom: 10;
+            z-index: 1;
+        }
+        .intro-mission .curve {
+            left: 0;
+        }
+        .our-services .curve {
+            right: 0;
+            left: auto;
+            border-radius: 100% 0 0 100%;
+        }
+        .about-company .curve {
+            left: 0;
+        }
+        .contact .curve {
+            right: 0;
+            left: auto;
+            border-radius: 100% 0 0 100%;
+        }
+        .intro-mission {
+            background-color: rgba(70, 130, 180, 0.8);
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIAROM-OEAAZr_nvKztNbl0XP5CMHE9pvZZg&s');
+            background-blend-mode: overlay;
+            color: black;
+        }
+        .our-services {
+            background-color: rgba(178, 34, 34, 0.6); /* Red with 60% opacity */
+            background-image: url('https://media.istockphoto.com/id/1030719392/photo/blur-of-night-seaside-cityscape-background-relax-happy-relax-and-enjoy-in-nature-lifestyle.jpg?s=1024x1024&w=is&k=20&c=cPZf54cizSLaIJszX0IGN4WVT_Mm3gf0RgKCsuWI2oo=');
+            background-blend-mode: overlay;
+        }
+        .about-company {
+            background-color: rgba(210, 180, 140, 0.6); /* Light brown with 60% opacity */
+            background-image: url('https://media.istockphoto.com/id/1348855104/photo/hong-kong-nathan-road.jpg?s=612x612&w=0&k=20&c=P2Vyla0rl4_CPqAvLTPavYerFSQXgP7P8x6qzk7m7iU=');
+            background-blend-mode: overlay;
+        }
+        .contact {
+            background-color: rgba(0, 128, 128, 0.8); /* Teal with 80% opacity */
+            background-image: url('https://i.pinimg.com/736x/93/98/69/9398691ce8c1e06f36c8ee6437b926fb.jpg');
+            background-blend-mode: overlay;
+        }
+        .intro-mission .container, .about-company .container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .our-services .container, .contact .container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .intro-mission .container > div, .about-company .container > div {
+            width: 45%;
+        }
+        .our-services .container > div, .contact .container > div {
+            width: 45%;
+        }
+        .intro-mission .text-content, .about-company .text-content {
+            color: #000;
+            z-index: 3;
+        }
+        .about-company .text-content {
+            color: #000;
+        }
+        .about-company .container .image-content img {
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: black;
+        }
+        .contact button {
+            background-color: #006666;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .contact button:hover {
+            background-color: #004d4d;
+        }
+        footer {
+            background-color: #d4a017;
+            color: white;
+            text-align: center;
+            height: 50px;
+            padding: 10px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            color: #d4a017;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">STRIP</div>
+            <nav>
+                <a href="#intro-mission">Home</a>
+                <a href="#our-services">Services</a>
+                <a href="#about-company">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#">TemplateMo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="intro-mission" class="section intro-mission">
+            <div class="curve"></div>
+            <div class="container">
+                <div style="width: 45%; float: left; position: relative;">
+                    <h2>Introduction</h2>
+                    <p>Strip CSS Template is free <a href="#">Bootstrap</a> HTML layout for any kind of purpose. You may support us by telling your friends about <a href="#">TemplateMo</a> website. Please <a href="#">contact us</a> if you have any question.</p>
+                    <p>This template is last updated on 27 July 2020 for the main menu with external link support. You just need to put external in the link class for external URLs or web pages.</p>
+                </div>
+                <div style="width: 45%; float: right;">
+                    <h2>Our Mission</h2>
+                    <p>We provide 100% free responsive Bootstrap templates for everyone. Feel free to use our templates for your clients or business websites. You may visit TemplateMo for the latest and greatest HTML CSS layouts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="our-services" class="section our-services">
+            <div class="curve"></div>
+            <div class="container">
+                <div style="width: 45%; float: right;">
+                    <img src="https://assets.editorial.aetnd.com/uploads/2015/02/topic-golden-gate-bridge-gettyimages-177770941.jpg?width=768" alt="Golden Gate Bridge">
+                </div>
+                <div style="width: 45%; float: left;">
+                    <h2>Our Services</h2>
+                    <p>Praesent consectetur dictum massa eu tincidunt. Nulla facilisi. Nam tincidunt nec diam eget sollicitudin. Quisque tincidunt ex sit amet metus ultricies, sed lobortis purus finibus.</p>
+                    <p>Morbi nec felis rutrum, faucibus odio sed, ullamcorper risus. Sed id condimentum neque, at iaculis ex. Praesent faucibus viverra ante id auctor. Pellentesque at risus ut arcu blandit consectetur.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-company" class="section about-company">
+            <div class="curve"></div>
+            <div class="container">
+                <div class="text-content">
+                    <h2>About our company</h2>
+                    <p>Praesent consectetur dictum massa eu tincidunt. Nulla facilisi. Nam tincidunt nec diam eget sollicitudin. Quisque tincidunt ex sit amet metus ultricies, sed lobortis purus finibus.</p>
+                    <p>Morbi nec felis rutrum, faucibus odio sed, ullamcorper risus. Sed id condimentum neque, at iaculis ex. Praesent faucibus viverra ante id auctor. Pellentesque at risus ut arcu blandit consectetur.</p>
+                </div>
+                <div class="image-content">
+                    <img src="https://media.istockphoto.com/id/1348855104/photo/hong-kong-nathan-road.jpg?s=612x612&w=0&k=20&c=P2Vyla0rl4_CPqAvLTPavYerFSQXgP7P8x6qzk7m7iU=" alt="City Street">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="curve"></div>
+            <div class="container">
+                <div style="width: 45%; float: right;">
+                    <h2>Send a message</h2>
+                    <form>
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <input type="text" placeholder="Subject">
+                        <textarea placeholder="Message" rows="4"></textarea>
+                        <button type="submit">Send it Now</button>
+                    </form>
+                </div>
+                <div style="width: 45%; float: left;">
+                    <h2>Contact Us</h2>
+                    <p>If you need a working contact form script, please follow our. Thank you for visiting our website.</p> <a href="#" style="color: white;">contact page</a>.
+                    <h3>Our Address</h3>
+                    <p>160-420 Praesent consectetur, Dictum massa 10620</p>
+                    <p>Tel: 090-080-0760 <a href="mailto:info@company.com" style="color: black;">Email: info@company.com</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Copyright © 2020 Company Name. Design: TemplateMo</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            const sections = document.querySelectorAll('section');
+
+            window.addEventListener('scroll', function() {
+                let current = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+
+                    if (pageYOffset >= sectionTop - 50 && pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+		 navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
